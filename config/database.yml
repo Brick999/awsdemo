@@ -20,10 +20,12 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  username: ubuntu
 
 development:
   <<: *default
   database: awsdemo_development
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -81,5 +83,4 @@ test:
 production:
   <<: *default
   database: awsdemo_production
-  username: ubuntu
   password: <%= ENV['AWSDEMO_DATABASE_PASSWORD'] %>
