@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: awsdemo_production
-  username: awsdemo
+  username: ubuntu
   password: <%= ENV['AWSDEMO_DATABASE_PASSWORD'] %>
